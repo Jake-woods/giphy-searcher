@@ -2,12 +2,15 @@
    main {
       header {
          h1 {
-            font-size: 1.5rem;
+            font-size: 2rem;
             line-height: 1.75;
+            text-align: left;
          }
 
          h3 {
             font-size: .95rem;
+            text-align: left;
+
             &::after {
                animation: changeColors 5s ease infinite;
                background: linear-gradient(270deg, #2afc9c, #fb6769, #9740fa, #22cdfb, #fff39f);
@@ -30,12 +33,29 @@
 
             input[type=text] {
                border-radius: 0;
+               margin-bottom: .5em;
             }
 
             input[type=submit] {
                border-radius: 0;
             }
          }
+      }
+   }
+
+   section#gifs {
+      padding: .5em;
+
+      .gifs-container {
+         grid-template-columns: repeat(1, 1fr) !important;
+      }
+   }
+}
+
+@media (max-width: 50em) {
+   section#gifs {
+      .gifs-container {
+         grid-template-columns: repeat(2, 1fr);
       }
    }
 }
